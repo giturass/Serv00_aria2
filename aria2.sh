@@ -1,8 +1,10 @@
 #!/bin/sh
 
+# 提示用户输入端口和密钥
+read -p "请输入端口号: " PORT
+read -p "请输入密钥: " SECRET
+
 # 定义变量
-PORT=
-SECRET=
 APP_COMMAND="/usr/local/bin/aria2c --enable-rpc --rpc-secret $SECRET --rpc-listen-port=$PORT --rpc-allow-origin-all &> aria2c.log"
 
 # 检测 IPv4 和 IPv6 是否有端口被占用
